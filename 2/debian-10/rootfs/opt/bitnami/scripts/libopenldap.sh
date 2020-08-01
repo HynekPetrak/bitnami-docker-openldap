@@ -205,10 +205,10 @@ changeType: modify
 add: olcRootPW
 olcRootPW: $LDAP_ENCRYPTED_ADMIN_PASSWORD
 
-dn: olcDatabase={1}monitor,cn=config
-changetype: modify
-replace: olcAccess
-olcAccess: {0}to * by dn.base="gidNumber=0+uidNumber=0,cn=peercred,cn=external, cn=auth" read by dn.base="${LDAP_ADMIN_DN}" read by * none
+# dn: olcDatabase={1}monitor,cn=config
+# changetype: modify
+# replace: olcAccess
+# olcAccess: {0}to * by dn.base="gidNumber=0+uidNumber=0,cn=peercred,cn=external, cn=auth" read by dn.base="${LDAP_ADMIN_DN}" read by * none
 EOF
     debug_execute ldapmodify -Y EXTERNAL -H "ldapi:///" -f "${LDAP_SHARE_DIR}/admin.ldif"
 }

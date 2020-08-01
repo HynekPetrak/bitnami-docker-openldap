@@ -1,3 +1,7 @@
+# Don't use this fork
+
+Don't use this fork in production. This docker is made intentionally insecure by removing ACL.
+
 # What is OpenLDAP?
 
 > [OpenLDAP](https://openldap.org/) is the open-source solution for LDAP (Lightweight Directory Access Protocol). It is a protocol used to store and retrieve data from a hierarchical directory structure such as in databases.
